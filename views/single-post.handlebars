@@ -1,0 +1,35 @@
+{{post.title}}
+{{post.content}}
+{{post.created_at}}
+{{comment.comment_text}}
+
+<ol class="post-list">
+  {{#each comments as |comment|}}
+  <li>
+   {{comment_text}}
+  </li>
+  {{/each}}
+</ol>
+
+
+
+{{#if loggedIn}}
+<form class="comment-form">
+  <div>
+    <textarea name="comment-body"> </textarea>
+  </div>
+
+  <div>
+    
+    <a href="/post/edit/{{comment.id}}"><button type="submit">add comment</button></a>
+    <a href="/post/edit/{{post.id}}"><button type="button" class="upvote-btn">Edit</button></a>
+  </div>
+</form>
+{{/if}}
+
+{{!-- {{> comments post.comments}} --}}
+
+{{#if loggedIn}}
+<script src="/javascript/comment.js"></script>
+
+{{/if}}

@@ -1,0 +1,25 @@
+<section>
+  <h2>Create A New Blog Post</h2>
+
+  
+ <a href="/post/create/" class="edit-link"><button type="submit" class="btn">Create a new post</button></a>
+    
+ 
+</section>
+
+{{#if posts.length}}
+<section>
+  <h2>Your Posts</h2>
+  <ol>
+    {{#each posts as |post|}}
+    <h4>{{title}}</h4>
+    <p>{{content}}</p>
+    <li>
+      <a href="/post/edit/{{post.id}}" class="edit-link">Edit post</a>
+    </li>
+    {{/each}}
+  </ol>
+</section>
+{{/if}}
+
+<script src="/javascript/add-post.js"></script>
