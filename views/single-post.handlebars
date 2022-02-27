@@ -1,15 +1,16 @@
 {{post.title}}
 {{post.content}}
 {{post.created_at}}
-{{comment.comment_text}}
 
-<ol class="post-list">
-  {{#each comments as |comment|}}
+<h3>Comments</h3>
+<p> (click 'add comment' button to add a comment or edit to edit your post') </p>
+<ul class="post-list">
+  {{#each post.comments}}
   <li>
-   {{comment_text}}
+ {{comment_text}}
   </li>
   {{/each}}
-</ol>
+</ul>
 
 
 

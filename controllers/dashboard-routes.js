@@ -44,7 +44,7 @@ router.get("/", withAuth, (req, res) => {
 });
 
 router.get("/edit/:id", withAuth, (req, res) => {
-  console.log("=======CheckWhatThisRouteDoes===============");
+  console.log("=======EditASingleID===============");
   Post.findByPk(req.params.id, {
     //attributes: ["id", "post_url", "title", "created_at"],
     include: [
