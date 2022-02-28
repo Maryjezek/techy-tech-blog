@@ -1,7 +1,7 @@
 <ol class="post-list">
   {{#each posts as |post|}}
   <li>
-   <a href="/post/{{post.id}}">{{post.title}} {{post.createdAt}}</a>
+   <a href="/post/{{post.id}}">Title: {{post.title}} Date Created: {{format_date post.createdAt}}</a>
   </li>
   {{/each}}
 </ol>

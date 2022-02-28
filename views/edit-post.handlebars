@@ -4,9 +4,10 @@
     Edit or Create Post
   </h2>
   {{#if post.id}}
-  <form class="edit-post-form" action="/post/edit/{{post.id}}" method="post">
+  <form class="edit-post-form" formaction="/post/edit/{{post.id}}" method="post">
+
   {{else}}
-  <form class="edit-post-form" action="/post/create" method="post">
+  <form class="edit-post-form" formaction="/post/create" method="post">
   {{/if}}
     <div>
       <input name="title" type="text" value="{{post.title}}" />

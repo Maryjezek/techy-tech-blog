@@ -16,6 +16,7 @@
   padding: 3% 4%;
   background-color: var(--light-dark);
   color: var(--primary);
+  height: 100px;
    }
 
 
@@ -107,6 +108,7 @@ header {
 
 header h1 {
   font-size: 1em;
+  background-color: white;
 }
 
 main {
